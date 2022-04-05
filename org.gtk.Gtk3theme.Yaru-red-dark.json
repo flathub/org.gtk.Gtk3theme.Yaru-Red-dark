@@ -1,5 +1,5 @@
 {
-    "id": "org.gtk.Gtk3theme.Yaru-Red-dark",
+    "id": "org.gtk.Gtk3theme.Yaru-red-dark",
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
@@ -7,12 +7,12 @@
     "appstream-compose": false,
     "separate-locales": false,
     "build-options": {
-        "prefix": "/usr/share/runtime/share/themes/Yaru-Red-dark/gtk-3.0"
+        "prefix": "/usr/share/runtime/share/themes/Yaru-red-dark/gtk-3.0"
     },
     "modules": [
         {
             "name": "sassc",
-            "config-opts": ["--with-libsass=/usr/share/runtime/share/themes/Yaru-Red-dark/gtk-3.0"],
+            "config-opts": ["--with-libsass=/usr/share/runtime/share/themes/Yaru-red-dark/gtk-3.0"],
             "cleanup": ["*"],
             "sources": [
                 {
@@ -46,19 +46,29 @@
             ]
         },
         {
-            "name": "Yaru-Red-dark",
+            "name": "Yaru-red-dark",
             "buildsystem": "meson",
             "build-options": {
                 "prefix": "/usr/share/runtime",
-                "append-path": "/usr/share/runtime/share/themes/Yaru-Red-dark/gtk-3.0/bin",
-                "config-opts": [ "-Dicons=false", "-Dgnome-shell=false", "-Dsounds=false", "-Dsessions=false", "-Ddark=false", "-Dgtksourceview=false", "-Dmetacity=false" ]
+                "append-path": "/usr/share/runtime/share/themes/Yaru-red-dark/gtk-3.0/bin",
+                "config-opts": [
+                    "-Dicons=false",
+                    "-Dgnome-shell=false",
+                    "-Dsounds=false",
+                    "-Dsessions=false",
+                    "-Ddefault=false",
+                    "-Ddark=true",
+                    "-Daccent-colors=red",
+                    "-Dgtksourceview=false",
+                    "-Dmetacity=false"
+                ]
             },
             "sources": [
                 {
                     "type": "archive",
                     "archive-type": "tar-gzip",
-                    "url": "https://api.github.com/repos/Jannomag/Yaru-Colors/tarball/21.10.3ubuntu5",
-                    "sha256": "78168a11d52932bfd7dce967120155290d4f1dbdc55cdd35644b8d40d0e9c534"
+                    "url": "https://github.com/ubuntu/yaru/archive/refs/tags/22.04.3.1.tar.gz",
+                    "sha256": "84e83a823afd3d4fa24e9397342437cd1fe27e3a1be4e802beade336ee70a5c1"
                 }
             ]
         },
@@ -67,13 +77,13 @@
             "buildsystem": "simple",
             "build-commands": [
                 "mkdir -p ${FLATPAK_DEST}/share/appdata",
-                "cp org.gtk.Gtk3theme.Yaru-Red-dark.appdata.xml ${FLATPAK_DEST}/share/appdata",
-                "appstream-compose --basename=org.gtk.Gtk3theme.Yaru-Red-dark --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.Yaru-Red-dark"
+                "cp org.gtk.Gtk3theme.Yaru-red-dark.appdata.xml ${FLATPAK_DEST}/share/appdata",
+                "appstream-compose --basename=org.gtk.Gtk3theme.Yaru-red-dark --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.Yaru-red-dark"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "path": "org.gtk.Gtk3theme.Yaru-Red-dark.appdata.xml"
+                    "path": "org.gtk.Gtk3theme.Yaru-red-dark.appdata.xml"
                 }
             ]
         }

@@ -7,8 +7,11 @@
   <description>
     <p>Yaru-Colors is a theme project to bring different colors to Ubuntu's awesome Yaru theme.</p>
   </description>
-  <url type="homepage">https://github.com/Jannomag/Yaru-Colors</url>
+  <url type="homepage">https://github.com/ubuntu/Yaru</url>
   <releases>
+        <release version="22.04.3.1" date="2022-03-28">
+          <description>- Using Yaru-red-dark from official Yaru repository
+        </release>
         <release version="21.10.3ubuntu5" date="2022-02-02">
             <description>- New release specifically targeted for `ubuntu-21.10`
 - added support for `GTK4, GNOME-Shell 40,41`
