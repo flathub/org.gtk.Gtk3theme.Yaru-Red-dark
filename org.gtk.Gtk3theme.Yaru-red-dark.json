@@ -1,5 +1,5 @@
 {
-    "id": "org.gtk.Gtk3theme.Yaru-Red-dark",
+    "id": "org.gtk.Gtk3theme.Yaru-red-dark",
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
@@ -7,12 +7,12 @@
     "appstream-compose": false,
     "separate-locales": false,
     "build-options": {
-        "prefix": "/usr/share/runtime/share/themes/Yaru-Red-dark/gtk-3.0"
+        "prefix": "/usr/share/runtime/share/themes/Yaru-red-dark/gtk-3.0"
     },
     "modules": [
         {
             "name": "sassc",
-            "config-opts": ["--with-libsass=/usr/share/runtime/share/themes/Yaru-Red-dark/gtk-3.0"],
+            "config-opts": ["--with-libsass=/usr/share/runtime/share/themes/Yaru-red-dark/gtk-3.0"],
             "cleanup": ["*"],
             "sources": [
                 {
@@ -46,11 +46,11 @@
             ]
         },
         {
-            "name": "Yaru-Red-dark",
+            "name": "Yaru-red-dark",
             "buildsystem": "meson",
             "build-options": {
                 "prefix": "/usr/share/runtime",
-                "append-path": "/usr/share/runtime/share/themes/Yaru-Red-dark/gtk-3.0/bin",
+                "append-path": "/usr/share/runtime/share/themes/Yaru-red-dark/gtk-3.0/bin",
                 "config-opts": [
                     "-Dicons=false",
                     "-Dgnome-shell=false",
@@ -77,13 +77,13 @@
             "buildsystem": "simple",
             "build-commands": [
                 "mkdir -p ${FLATPAK_DEST}/share/appdata",
-                "cp org.gtk.Gtk3theme.Yaru-Red-dark.appdata.xml ${FLATPAK_DEST}/share/appdata",
-                "appstream-compose --basename=org.gtk.Gtk3theme.Yaru-Red-dark --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.Yaru-Red-dark"
+                "cp org.gtk.Gtk3theme.Yaru-red-dark.appdata.xml ${FLATPAK_DEST}/share/appdata",
+                "appstream-compose --basename=org.gtk.Gtk3theme.Yaru-red-dark --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.Yaru-red-dark"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "path": "org.gtk.Gtk3theme.Yaru-Red-dark.appdata.xml"
+                    "path": "org.gtk.Gtk3theme.Yaru-red-dark.appdata.xml"
                 }
             ]
         }
