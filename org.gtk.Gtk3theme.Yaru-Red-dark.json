@@ -56,7 +56,9 @@
                     "-Dgnome-shell=false",
                     "-Dsounds=false",
                     "-Dsessions=false",
-                    "-Ddark=false",
+                    "-Ddefault=false",
+                    "-Ddark=true",
+                    "-Daccent-colors=red",
                     "-Dgtksourceview=false",
                     "-Dmetacity=false"
                 ]
@@ -65,8 +67,8 @@
                 {
                     "type": "archive",
                     "archive-type": "tar-gzip",
-                    "url": "https://api.github.com/repos/Jannomag/Yaru-Colors/tarball/21.10.3ubuntu5",
-                    "sha256": "78168a11d52932bfd7dce967120155290d4f1dbdc55cdd35644b8d40d0e9c534"
+                    "url": "https://github.com/ubuntu/yaru/archive/refs/tags/22.04.3.1.tar.gz",
+                    "sha256": "84e83a823afd3d4fa24e9397342437cd1fe27e3a1be4e802beade336ee70a5c1"
                 }
             ]
         },
